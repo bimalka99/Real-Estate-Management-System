@@ -1,0 +1,40 @@
+# ---- .NET ----
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# User-uploaded property images (local disk storage — see LocalFileStorageService).
+# Not source; would also bloat the repo. Swap to cloud storage before deploying.
+backend/src/RealEstate.API/wwwroot/uploads/
+
+# Dev-only email sender output (see DevEmailSender) — contains real user email
+# addresses and live verification/reset tokens, never source.
+backend/src/RealEstate.API/wwwroot/dev-emails/
+
+# ASP.NET Core Data Protection keyring (see DependencyInjection.AddInfrastructure) —
+# encrypts 2FA secrets at rest; key material, never source.
+backend/src/RealEstate.API/wwwroot/.dataprotection-keys/
+
+# Throwaway scratch files from manual API testing (curl responses, TOTP test helper).
+backend/*.json
+backend/totp-test.js
+
+# ---- Node / Next.js (frontend, added later) ----
+node_modules/
+.next/
+out/
+.env
+.env.local
+.env.*.local
+
+# ---- Editor / OS ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---- Logs ----
+*.log
+npm-debug.log*
